@@ -10,5 +10,6 @@ export default defineConfig({
   preview: {
     port: 5173, // Convert PORT to number
     host: '0.0.0.0', // Bind to all interfaces
+    allowedHosts: ['typescriptreact.onrender.com'],
   }
 });
