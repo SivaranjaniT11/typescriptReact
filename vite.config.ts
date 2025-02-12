@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  server: {
+    port: 5173,  // Local development port
+    host: '0.0.0.0', // Allow external access
+  },
+  preview: {
+    port: 5173, // Convert PORT to number
+    host: '0.0.0.0', // Bind to all interfaces
+  }
+});
